@@ -65,6 +65,9 @@ theme = createTheme(theme, {
       styleOverrides: {
 
         root: {
+
+          height: 3,
+
           "&.Mui-disabled": {
             color: theme.palette.secondary.main
           }
