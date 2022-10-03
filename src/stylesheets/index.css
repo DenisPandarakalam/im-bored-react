@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url(../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Bold.ttf);
+  font-weight: bolder;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url(../assets/fonts/IBM_Plex_Sans/IBMPlexSans-SemiBold.ttf);
+  font-weight: bold;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url(../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'IBMPlexSans';
+  src: url(../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Light.ttf);
+  font-weight: lighter;
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'IBMPlexSans';
+
+  background-image: url("../assets/images/bg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

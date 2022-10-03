@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
+import { AppBar, Toolbar, Typography, CssBaseline, GlobalStyles } from '@mui/material';
+
+
+import { Form } from './components/Form';
+
+import theme from './themes/theme2';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+
+    <ThemeProvider theme={theme}>
+      <CssBaseline>
+        <AppBar 
+          sx={{ 
+            alignItems: 'center', 
+            justifyContent: 'center',
+            backdropFilter: 'blur(20px)'
+          }} 
+          color='transparent'
+          elevation={0}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Toolbar>
+            <Typography variant="h1" component="div">
+              bored?
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <Form />
+      </CssBaseline>
+    </ThemeProvider>
   );
 }
 
