@@ -4,10 +4,10 @@ let theme = createTheme({
   palette: {
     mode: 'dark',
     primary: {
-      main: '#81D4FA',
+      main: '#29B6F6',
     },
     secondary: {
-      main: '#3949ab',
+      main: '#FFFFFF',
     },
     error: {
       main: '#b71c1c',
@@ -31,6 +31,7 @@ let theme = createTheme({
     },
     h6: {
       fontWeight: 'normal',
+      fontSize: 24
     },
   },
 
@@ -43,12 +44,29 @@ theme = createTheme(theme, {
       `
     },
 
+    MuiButton: {
+      styleOverrides: {
+        root: {
+
+          transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
+
+          "&.Mui-active, &:active": {
+            
+            transform: 'scaleX(.95) scaleY(0.92)',
+            boxShadow: `0px 0px 0px 4px ${
+              theme.palette.primary.main
+            }`,
+          }
+        }
+      }
+    },
+
     MuiSlider: {
       styleOverrides: {
 
         root: {
           "&.Mui-disabled": {
-            color: theme.palette.primary.main
+            color: theme.palette.secondary.main
           }
         },
 
@@ -58,13 +76,34 @@ theme = createTheme(theme, {
           
           (ownerState.disabled === true && 
             {
-              color: 'transparent'
+              display: 'none'
             }
           ) || ({
 
             width: 5,
             height: 5
-          })
+          }),
+          
+          transition: '0.3s cubic-bezier(.47,1.64,.41,.8)',
+
+          '&:before': {
+            boxShadow: '0 2px 12px 0 rgba(0,0,0,0.4)',
+          },
+
+          ':hover': {
+            width: 10,
+            height: 10,
+            boxShadow: 'none',
+          },
+
+          '&:hover, &.Mui-focusVisible, &.Mui-active': {
+            // boxShadow: `0px 0px 0px 4px ${
+            //   theme.palette.mode === 'dark'
+            //     ? 'rgb(255 255 255 / 16%)'
+            //     : 'rgb(0 0 0 / 16%)'
+            // }`,
+            boxShadow: 'none',
+          },
         })
 
       }

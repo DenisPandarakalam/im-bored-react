@@ -116,7 +116,7 @@ export const Form = () => {
                 margin={'auto'}
                 sx={{ pt: 10 }}
             >
-                <h6 style={{textAlign:'center'}}>let me find something to do</h6>
+                <h6 style={{textAlign:'center', fontSize: 13}}>let me find something to do</h6>
                 <div className="type">
 
                     <h2>Activity Type</h2>
@@ -146,6 +146,7 @@ export const Form = () => {
                     <Slider 
                         min={0}
                         max={8}
+                        marks
                         value={state.ppl}
                         onChange={(e, v) => handlePplChange(v as number)}
 

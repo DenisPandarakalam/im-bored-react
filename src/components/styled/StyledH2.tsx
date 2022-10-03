@@ -9,6 +9,5 @@ export const StyledH2 = styled('h2')({
     borderStyle: 'solid',
     borderColor: 'rgba(255, 255, 255, 0.2)',
 
-    
     backdropFilter: 'blur(20px)'
 });
