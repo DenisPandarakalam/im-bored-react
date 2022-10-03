@@ -1,4 +1,5 @@
 import { Box, Skeleton, Slider } from '@mui/material';
+import { lightGreen } from '@mui/material/colors';
 
 import { StyledH2 } from './styled/StyledH2';
 
@@ -38,7 +39,6 @@ export const Result = ({data}: any) => {
                 max={1}
                 step={0.01}
                 value={data.price}
-
                 disabled
             />
 
@@ -50,17 +50,17 @@ export const Result = ({data}: any) => {
                 max={1}
                 step={0.01}
                 value={data.difficulty}
-
                 disabled
             />
 
             <h2>Key</h2>
-            <p>
-                {data.key ||    
-                    <em style={{whiteSpace:'nowrap'}}>
-                        Adjust the parameters and submit!
-                    </em>}
-            </p>
+            <pre>
+                {
+                    data.key
+                ||    
+                    <Skeleton variant="rounded" width={'100%'} height={24} />
+                }
+            </pre>
         </Box>
     )
 }

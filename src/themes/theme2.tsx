@@ -33,12 +33,42 @@ let theme = createTheme({
       fontWeight: 'normal',
     },
   },
+
+});
+
+theme = createTheme(theme, {
   components: {
     MuiCssBaseline: {
       styleOverrides: `
       `
+    },
+
+    MuiSlider: {
+      styleOverrides: {
+
+        root: {
+          "&.Mui-disabled": {
+            color: theme.palette.primary.main
+          }
+        },
+
+        thumb: ({ ownerState, theme }: any) => ({
+          
+          ...
+          
+          (ownerState.disabled === true && 
+            {
+              color: 'transparent'
+            }
+          ) || ({
+
+            width: 5,
+            height: 5
+          })
+        })
+
+      }
     }
   }
-});
-
+})
 export default theme;

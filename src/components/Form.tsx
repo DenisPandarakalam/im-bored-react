@@ -89,8 +89,6 @@ export const Form = () => {
           .then(response => response.json())
           .then(data => {
     
-            console.log("API Response: ", data);
-    
             if(data.error)
               setResult({
                 ...result, 
@@ -126,16 +124,16 @@ export const Form = () => {
                         variant="standard" 
                         sx={{ width: '100%' }}
 
-                        disabled={(state.key!="")}
+                        disabled={(state.key!=="")}
                     >
                         <Select
                             value={state.type}
                             onChange={handleTypeChange}
                         >
-                            <MenuItem value=""><em>None</em></MenuItem>
+                            <MenuItem key={0} value=""><em>None</em></MenuItem>
                             
-                            {activityTypes.map(a => (
-                                <MenuItem value={a}>{a[0].toUpperCase()+a.substring(1)}</MenuItem>
+                            {activityTypes.map((a, i) => (
+                                <MenuItem key={i+1} value={a}>{a[0].toUpperCase()+a.substring(1)}</MenuItem>
                             ))}
                         </Select>
                     </FormControl>
@@ -151,7 +149,7 @@ export const Form = () => {
                         value={state.ppl}
                         onChange={(e, v) => handlePplChange(v as number)}
 
-                        disabled={(state.key!="")}
+                        disabled={(state.key!=="")}
                     />
                     <TextField  
                         type="number"
@@ -161,7 +159,7 @@ export const Form = () => {
                         value={state.ppl}
                         onChange={(e) => handlePplChange(Number(e.target.value))}
 
-                        disabled={(state.key!="")}
+                        disabled={(state.key!=="")}
                     />
                     <sub>*Setting this to 0 will disable this input</sub>
                 </div>
@@ -177,7 +175,7 @@ export const Form = () => {
                         value={state.priceRange}
                         onChange={(e, v) => handlePriceChange(v as number[])}
 
-                        disabled={(state.key!="")}
+                        disabled={(state.key!=="")}
                     />            
                 </div>
 
@@ -192,7 +190,7 @@ export const Form = () => {
                         value={state.diffRange}
                         onChange={(e, v) => handleDifficultyChange(v as number[])}
 
-                        disabled={(state.key!="")}
+                        disabled={(state.key!=="")}
                     />
                 </div>
                 <div className="key">
