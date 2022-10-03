@@ -67,7 +67,7 @@ export const Form = () => {
 
     const handleSubmit = () => {
     
-        const baseURL = "http://www.boredapi.com/api/activity"
+        const baseURL = "https://www.boredapi.com/api/activity"
         let options = "?"
 
         // If key is specified, only use that

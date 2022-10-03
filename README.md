@@ -14,13 +14,15 @@ Leave the ones you don't want to use untouched.
 Click the 'What Can I Do?' button.
 </p>
 
-
 ### Step 3
 <p>
 Read your results to stop being bored.
 If you want to look up this specific activity again, copy the given key.
 </p>
 
+# Demo
+Try it out [here!](https://imboredreact.web.app/)
+<br>
 
 # Description
 <h3> 
