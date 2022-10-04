@@ -2,7 +2,7 @@
 
 ![Screenshot](./assets/screenshots/landed2.png)
 
-# How To Use
+## How To Use
 ### Step 1
 <p>
 Set any of the available parameters you wish to use.<br>
@@ -20,18 +20,18 @@ Read your results to stop being bored.
 If you want to look up this specific activity again, copy the given key.
 </p>
 
-# Demo
+## Demo
 Try it out [here!](https://imboredreact.web.app/)
 <br>
 
-# Description
+## Description
 <h3> 
 I created this app to refresh myself and practice new features from the React framework.
 
 It calls upon the free-to-use [Bored API](https://www.boredapi.com/) for the activities that are returned.
 </h3>
 
-# Default React Scripts
+## Default React Scripts
 ### `npm start`
 
 Runs the app in the development mode.\
